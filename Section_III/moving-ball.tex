@@ -9,7 +9,8 @@ Part B: Goal-Kick from Moving Ball}
 \bigskip
 
 The goal of the goal-kick from a moving ball challenge is to kick a moving ball
-into the goal. Results of the technical challenge are based on a batch of three runs.
+into the goal \added{while avoiding an obstacle}.
+Results of the technical challenge are based on a batch of three runs.
 
 \bigskip
 
@@ -32,17 +33,22 @@ procedure is as follows:
 \item The ball is placed on one corner of the field as chosen by the team taking the
 technical challenge.
 \item The robot $R_K$ is placed on the penalty mark.
+\item \added{The obstacle $O$ is placed roughly between the penalty mark and the ball.}
 \item The pass of the ball may either be performed by a human member from the
 team $H$ or another robot, $R_P$. If the pass is performed by a robot, the team
 may place $R_P$ after the referee has placed the ball. $R_p$ can be placed
 anywhere on the field, at least 1m away from the ball.
 \item The referee blows the whistle to start the run.
 \item Teams may start the robot $R_P$ manually by pressing a button when the
-run starts. But $R_K$ must not be touched after the referee blew the whistle. If
-the pass is performed by a human, then the human is not allowed to wait before
-kicking. Once the whistle is blown the human as 2 seconds to kick the ball,
-otherwise the run is retaken.
-\item A chronometer is started when $R_P$ or $H$ kicks the ball.
+  run starts. But $R_K$ must not be touched after the referee blew the whistle.
+  \removed{
+    If the pass is performed by a human, then the human is not allowed to wait before
+    kicking.
+    Once the whistle is blown the human has 2 seconds to kick the ball,
+    otherwise the run is retaken.
+  }
+\item A chronometer is started when \added{the referee blows the whistle}
+  \removed{$R_P$ or $H$ kicks the ball}.
 \end{enumerate}
 
 {\bfseries Run evaluation}
@@ -55,16 +61,18 @@ the possible results are as following:
 \item \textit{Failure}
   \begin{itemize}
     \item The ball has been touched twice by $R_P$, $H$ or $R_K$.
+    \item \added{The ball touches the obstacle $O$ before being touched by $R_k$.}
     \item $R_k$ executed the kick motion but failed to kick the ball.
     \item The ball was kicked by $R_k$ but leaves the field without scoring a goal.
   \end{itemize}
 \item \textit{Retake}
   \begin{itemize}
+    \item \added{$R_k$ or $R_P$ moves before the whistle is blown.}
     \item The ball stops rolling or leaves the field before $R_k$ attempted to kick.
     \item The ball \emph{bounces} on $R_k$ rather than being kicked by $R_k$ and
           $R_k$ did not try to execute the kick motion before.
-    \item The pass is performed by a human and the human did not kick 2 seconds after
-          the whistle was blown.
+    \item \removed{The pass is performed by a human and the human did not kick 2 seconds after
+          the whistle was blown.}
   \end{itemize}
 \item \textit{Partial success}
   \begin{itemize}
@@ -89,6 +97,7 @@ The teams are ranked according to the following criteria on their best batch:
 \item Number of \textit{Success} where the pass of the ball was executed by a human
 \item Number of \textit{Partial success} where the pass of the ball was executed by a robot
 \item Number of \textit{Partial success} where the pass of the ball was executed by a human
-\item Average time for \textit{Success} runs, from first touch by $R_p$ or $H$ until goal is scored
+\item Average time for \textit{Success} runs, from \added{the moment the whistle
+    was blown} \removed{first touch by $R_p$ or $H$} until goal is scored
 \item Average shortest distance to the goal line for \textit{Partial success} runs
 \end{enumerate}
