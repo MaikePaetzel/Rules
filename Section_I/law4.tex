@@ -23,7 +23,7 @@ Robots participating in the Humanoid League competitions must have a human-like 
 
 \bigskip
 
-(new:) Robots in \added{KidSize} \removed{kid and teen size sub-leagues} must be
+(new:) Robots in KidSize must be
 equipped with a handle, to be picked up safely and with no harm to the robot and
 the handler.
 
@@ -39,7 +39,7 @@ the handler.
 
 
 The robots must be able to stand upright on their feet and to walk on their legs.
-KidSize \removed{and TeenSize} robots need to be able to recover from a fall
+KidSize robots need to be able to recover from a fall
 (get back to a standing position).
 The only allowed modes of locomotion are bipedal walking, running and jumping.
 
@@ -60,10 +60,8 @@ Robots must be equipped with an emergency stop button that makes the robot immed
 Based on $H_{top}$, the following size restrictions apply:
 
 \begin{itemize}
-\item 40 cm ${\leq}$ $H_{top}$ ${\leq}$ \removed{90} \added{100} cm to play in the KidSize class,
-\item \removed{80 cm ${\leq}$ $H_{top}$ ${\leq}$ 140 cm to play in the TeenSize class,}
-\item \removed{130} \added{100} cm ${\leq}$ $H_{top}$ ${\leq}$
-      \removed{180} \added{200} cm to play in the AdultSize class.
+\item 40 cm ${\leq}$ $H_{top}$ ${\leq}$ 100 cm to play in the KidSize class,
+\item 100 cm ${\leq}$ $H_{top}$ ${\leq}$ 200 cm to play in the AdultSize class.
 \end{itemize}
 
 $H_{top}$ is defined as the height of the robot when standing upright (with fully extended knees, cf. Fig. \ref{fig:bodyplan} right) and $H_{COM}$ denotes the height of the robot's centre of mass, measured in upright posture. $H_{top}$ is measured with the head of the robot oriented in such a way that it is tilted to either its maximum upwards tilt angle or the horizon line, whichever is lower.
@@ -74,19 +72,13 @@ $H_{top}$ is defined as the height of the robot when standing upright (with full
 
 \headlinebox
 
-\begin{itemize}
-\item \removed{The maximum weight for robots allowed to play in the TeenSize class is 20 kg.}
-\item \removed{The minimum weight for robots allowed to play in the AdultSize class is 10 kg.}
-\end{itemize}
-
-\added{
 The robot's Body-Mass Index (BMI) is defined as follows:
 $\mathrm{BMI} = \frac{M}{{H_{top}}^2}$,
 where $M$ is the mass of the robot in kg and $H_{top}$ its height in meters.
 The following restriction applies:
-}
+
 \begin{itemize}
-\item \added{$5 \leq \mathrm{BMI} \leq 30$}
+\item $5 \leq \mathrm{BMI} \leq 30$
 \end{itemize}
 
 \bigskip
@@ -109,8 +101,7 @@ All robots participating in the Humanoid League must comply with the following r
 \item The robot does not possess a configuration where it is extended longer than 1.5{\textperiodcentered}$H_{top}$ .
 \item The length of the legs $H_{leg}$, including the feet, satisfies 0.35{\textperiodcentered}$H_{top}$ ${\leq}$ $H_{leg}$ ${\leq}$ 0.7{\textperiodcentered}$H_{top}$ .
 \item The height of the head $H_{head}$, including the neck,
-  satisfies \added{$0.1 \cdot H_{top} \leq H_{head} \leq 0.3 \cdot H_{top}$}\\
-  \removed{$0.05 \cdot H_{top} \leq H_{head} \leq 0.25 \cdot H_{top}$}.
+  satisfies $0.1 \cdot H_{top} \leq H_{head} \leq 0.3 \cdot H_{top}$.
   $H_{head}$ is defined as the vertical distance from the axis of the first arm
   joint at the shoulder to the top of the head.
 \item The leg length is measured while the robot is standing up straight. The length is measured from the first rotating joint where its axis lies in the plane parallel to the standing ground to the tip of the foot.
@@ -151,22 +142,16 @@ must be able to play if the network is of low quality. Only robots are allowed t
 \bigskip
 
 Robots in play may communicate with each other at any time during a game.
-\removed{
-  Robots not currently in play may only send status updates about their own
-  internal hardware or software functionality over the network.
-  They may not communicate any game relevant information.
-}
-Any kind of transmission from an external computer
-\removed{or an out of play robot} to the playing robots is prohibited.
+
+Any kind of transmission from an external computer to the playing robots is prohibited.
 This implies that any monitoring is only done by receiving UDP communication
 from the robots using an external computer connected by tethered LAN to the
 official wireless router. 
 
-\added{
-  Substitute robots need to be turned away from the field in order to
-  ensure they are not accidentally or purposefully sending game-relevant
-  information to the robots in play. 
-}
+Substitute robots need to be turned away from the field in order to
+ensure they are not accidentally or purposefully sending game-relevant
+information to the robots in play. 
+
 
 \bigskip
 
@@ -199,15 +184,13 @@ During the game an official game controller/referee box will be used.
 It uses UDP to broadcast information to the robots like elapsed time,
 current score, game state (ready, set, playing, finished) and the robot-specific
 penalized state. The source code is open.
-\added{Teams have to be able to use the referee box in order to respect the rules.}
-\removed{To encourage teams to use the referee box, 15 seconds advantage is
-given to teams using the referee box in any stoppage of the game.}
+Teams have to be able to use the referee box in order to respect the rules.
 
 
 
 \bigskip
 
-In KidSize \removed{and TeenSize}, no humans are allowed on the field while the
+In KidSize, no humans are allowed on the field while the
 ball is in play.
 Robot handlers stay in a designated area and must receive permission from the
 referee prior to entering the field.
