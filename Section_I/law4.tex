@@ -23,9 +23,9 @@ Robots participating in the Humanoid League competitions must have a human-like 
 
 \bigskip
 
-(new:) Robots in KidSize must be
+\removed{(new:) Robots in KidSize must be
 equipped with a handle, to be picked up safely and with no harm to the robot and
-the handler.
+the handler.}
 
 
 \begin{figure}[h]
@@ -49,7 +49,7 @@ All actions of the robots must be kinematically equivalent to humanoid motions.
 
 \bigskip
 
-Robots must be equipped with an emergency stop button that makes the robot immediately desist with all motions, or ideally go limp and/or cut power to the actuators. In addition to the emergency stop button, robots may only have up to two additional physical or virtual buttons: One to start the robot behaviour and one to stop the behaviour. The buttons must be clearly labeled. If the robot has more buttons that cannot be detached, they must be visibly masked during the games.
+\removed{Robots must be equipped with an emergency stop button that makes the robot immediately desist with all motions, or ideally go limp and/or cut power to the actuators. In addition to the emergency stop button, robots may only have up to two additional physical or virtual buttons: One to start the robot behaviour and one to stop the behaviour. The buttons must be clearly labeled. If the robot has more buttons that cannot be detached, they must be visibly masked during the games.}
 
 \bigskip
 
@@ -116,9 +116,9 @@ All robots participating in the Humanoid League must comply with the following r
 Teams participating in the Humanoid League competitions are encouraged to equip their robots with sensors that have an equivalent in human senses. These sensors must be placed at a position roughly equivalent to the location of the human{\textquoteright}s biological sensors. In particular, 
 
 \begin{itemize}
-\item The only active external sensor allowed is sound
+\item \added{No active external sensors may be used during the game.}\removed{The only active external sensor allowed is sound
 (``human-like'' with respect to volume and frequency) with one loudspeaker on the robot. The loudspeaker may be placed in the head, neck or trunk of the robot. Any
-other active sensor (emitting light, sound, or electromagnetic waves into the environment in order to measure reflections) is not allowed. 
+other active sensor (emitting light, sound, or electromagnetic waves into the environment in order to measure reflections) is not allowed.} 
 \item External sensors, such as cameras and up to two microphones, may not be placed in the legs or arms or the
 torso of the robots. They must be placed in the robot's
 head and above any neck joint. 
@@ -136,34 +136,33 @@ Robots participating in the Humanoid League competitions must act autonomously w
 
 \bigskip
 
-Robots may communicate only via the wireless network provided by the organizers, which must support the referee box. The total bandwidth of the robots belonging to one team may not exceed 1 Mbit/s. The robots must not rely on the quality of the wireless network. They
-must be able to play if the network is of low quality. Only robots are allowed to communicate by WLAN. Any other computers of team members are only allowed to communicate by tethered LAN. No other wireless communication is allowed onsite. All other wireless hardware must be deactivated. A team may be disqualified if one of the team members violates this rule.
+Robots may communicate only via the \removed{wireless} network provided by the organizers, which must support the referee box. The total bandwidth of the \added{virtual} robot\removed{s} \added{instances} belonging to one team may not exceed 1 Mbit/s. \added{Teams will not be able to monitor the robot communication and receive debug messages during an ongoing simulation.} \removed{The robots must not rely on the quality of the wireless network. They
+must be able to play if the network is of low quality. Only robots are allowed to communicate by WLAN. Any other computers of team members are only allowed to communicate by tethered LAN. No other wireless communication is allowed onsite. All other wireless hardware must be deactivated. A team may be disqualified if one of the team members violates this rule.}
 
 \bigskip
 
 Robots in play may communicate with each other at any time during a game.
-
-Any kind of transmission from an external computer to the playing robots is prohibited.
-This implies that any monitoring is only done by receiving UDP communication
+Any kind of transmission from an external computer to the playing robots is prohibited. 
+\removed{This implies that any monitoring is only done by receiving UDP communication
 from the robots using an external computer connected by tethered LAN to the
-official wireless router. 
+official wireless router.}
 
-Substitute robots need to be turned away from the field in order to
+\removed{Substitute robots need to be turned away from the field in order to
 ensure they are not accidentally or purposefully sending game-relevant
-information to the robots in play. 
+information to the robots in play.}
 
 
 \bigskip
 
 Sending any direct or indirect transmission from an external computer to the
-robots has to take place during a timeout or any form of temporal absence and
+robots \added{is not possible during a simulated game.} \removed{has to take place during a timeout or any form of temporal absence and
 outside the field of play.
 Any time the robot handler or another team member is touching the robot,
 a cable is connected or another form of communication with the robot
 (including button clicks) take place, the robot is considered in service.
 The regular penalty time will start counting only after any type of
 communication with the robot has finished and will be reset whenever the robot
-handler attempts to service the robot again.
+handler attempts to service the robot again.}
 
 \bigskip
 
@@ -190,13 +189,13 @@ Teams have to be able to use the referee box in order to respect the rules.
 
 \bigskip
 
-In KidSize, no humans are allowed on the field while the
+\removed{In KidSize, no humans are allowed on the field while the
 ball is in play.
 Robot handlers stay in a designated area and must receive permission from the
 referee prior to entering the field.
 Each team may designate only one person as robot handler.
 The robot handler of a team may not touch a robot of another team in order to
-avoid any (unintentional or intentional) damage to that robot. 
+avoid any (unintentional or intentional) damage to that robot.}
 
 \bigskip
 
@@ -254,8 +253,8 @@ The basic compulsory equipment of a player comprises the following separate item
       legs and chest combined must be at least $0.06\cdot {H_{top}}^2$.
       The visible area of the one to five largest team markers on each side
       (left, right, front and back) must be at least $0.015\cdot {H_{top}}^2$.
-      If both teams cannot agree, which team colour to use, a coin will be
-      flipped an hour prior to the game to assign the team colours.
+      \added{The color teams play in is randomly assigned and announced in the game plan.}\removed{If both teams cannot agree, which team colour to use, a coin will be
+      flipped an hour prior to the game to assign the team colours.}
 \item (new) The robots of each team must be uniquely identifiable. They must be marked with numbers or names. The goal keeper robot must be marked uniquely that it can be easily distinguished from the other robots of a team by the referees. 
 \item The two teams must wear colours that distinguish them from each other and also the referee and the assistant referees.
 \greyed{\item 
@@ -268,32 +267,38 @@ The basic compulsory equipment of a player comprises the following separate item
 
 \headlinebox
 
+\added{The equipment of the players is checked by the Technical Committee prior to the tournament.}
+
+\bigskip
+
 In the event of any infringement of this Law:
 
 \begin{itemize}
-\item play need not be stopped
-\item the player at fault is instructed by the referee to leave the field of play to correct his equipment
-\item the player leaves the field of play when the ball next ceases to be in play, unless he has already corrected his equipment
-\item any player required to leave the field of play to correct his equipment must not re-enter without the referee's permission
-\item the referee checks that the player's equipment is correct before allowing him to re-enter the field of play 
-\item the player is only allowed to re-enter the field of play before the respective penalty time is over \greyed{ (replaces: when the ball is out of play)}
+\item \added{The Technical Committee notifies the team in advance of the tournament about the violations and allows them to correct the equipment of the players.}
+\item \added{In case no valid URDF file has been provided prior to the tournament, the team is excluded from participation.}
+\item \removed{play need not be stopped}
+\item \removed{the player at fault is instructed by the referee to leave the field of play to correct his equipment}
+\item \removed{the player leaves the field of play when the ball next ceases to be in play, unless he has already corrected his equipment}
+\item \removed{any player required to leave the field of play to correct his equipment must not re-enter without the referee's permission}
+\item \removed{the referee checks that the player's equipment is correct before allowing him to re-enter the field of play }
+\item \removed{the player is only allowed to re-enter the field of play before the respective penalty time is over \greyed{ (replaces: when the ball is out of play)}}
 \end{itemize}
 
 \bigskip
 
-A player who has been required to leave the field of play because of an infringement of this Law and who re-enters the field of play without the referee's permission must be cautioned.
+\removed{A player who has been required to leave the field of play because of an infringement of this Law and who re-enters the field of play without the referee's permission must be cautioned.}
 
 \bigskip
 
 \clearpage
-{\bfseries Restart of play}
+{\bfseries \removed{Restart of play}}
 
 \headlinebox
 
-If play is stopped by the referee to administer a caution:
+\removed{If play is stopped by the referee to administer a caution:}
 
 \begin{itemize}
-\item the match is restarted by an indirect free kick taken by a player of the opposing team from the place where the ball was located when the referee stopped the match (see Law 13 -- Position of free kick)
+\item \removed{the match is restarted by an indirect free kick taken by a player of the opposing team from the place where the ball was located when the referee stopped the match (see Law 13 -- Position of free kick)}
 \end{itemize}
 
 \bigskip
