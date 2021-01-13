@@ -53,6 +53,10 @@ All actions of the robots must be kinematically equivalent to humanoid motions.
 
 \bigskip
 
+\added{Body parts considered as feet and hands must be marked in the robot model.}
+
+\bigskip
+
 {\bfseries Robot Height (new)}
 
 \headlinebox
@@ -167,8 +171,8 @@ handler attempts to service the robot again.}
 \bigskip
 
 
-Teams may not use any type of communication, excluding verbal communication,
-with robots in play, in service or with robots serving their 30 seconds penalty
+Teams may not use any type of communication\removed{, excluding verbal communication,}
+with robots in play\removed{, in service} or with robots serving their 30 seconds penalty
 time that contains information which reduces the need for autonomy in detecting
 the current game state of the robots, including the position of the ball,
 the location where the robot re-enters the field,
@@ -256,7 +260,7 @@ The basic compulsory equipment of a player comprises the following separate item
       \added{The color teams play in is randomly assigned and announced in the game plan.}\removed{If both teams cannot agree, which team colour to use, a coin will be
       flipped an hour prior to the game to assign the team colours.}
 \item (new) The robots of each team must be uniquely identifiable. They must be marked with numbers or names. The goal keeper robot must be marked uniquely that it can be easily distinguished from the other robots of a team by the referees. 
-\item The two teams must wear colours that distinguish them from each other and also the referee and the assistant referees.
+\item The two teams must wear colours that distinguish them from each other \removed{and also the referee and the assistant referees.}
 \greyed{\item 
 (suspended: Each goalkeeper must wear colours that distinguish him from the other players, the referee and the assistant referees) }
 \end{itemize}
@@ -275,7 +279,7 @@ In the event of any infringement of this Law:
 
 \begin{itemize}
 \item \added{The Technical Committee notifies the team in advance of the tournament about the violations and allows them to correct the equipment of the players.}
-\item \added{In case no valid URDF file has been provided prior to the tournament, the team is excluded from participation.}
+\item \added{In case no valid robot model has been provided prior to the tournament, the team is excluded from participation.}
 \item \removed{play need not be stopped}
 \item \removed{the player at fault is instructed by the referee to leave the field of play to correct his equipment}
 \item \removed{the player leaves the field of play when the ball next ceases to be in play, unless he has already corrected his equipment}
